@@ -7,8 +7,9 @@ const routes = [
     handler: postPredictHandler,
     options: {
       payload: {
-        maxBytes: 1000000, // 1MB limit
+        maxBytes: 1048576, // 1MB limit
         allow: 'multipart/form-data',
+        parse: true,
         multipart: true,
       },
     },
