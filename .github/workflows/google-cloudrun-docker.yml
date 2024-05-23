@@ -7,6 +7,7 @@ on:
 env:
   PROJECT_ID: submissionmlgc-deborameiliana # TODO: update Google Cloud project id
   GAR_LOCATION: asia-southeast2 # TODO: update Artifact Registry location
+  GAR_REPOSITORY_NAME: image-asclepius-deborameiliana # TODO: update Artifact Registry Repository name
   SERVICE: asclepius-deborameiliana # TODO: update Cloud Run service name
   REGION: asia-southeast2 # TODO: update Cloud Run service region
 
