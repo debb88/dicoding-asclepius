@@ -6,7 +6,7 @@ const loadModel = require('../services/loadModel');
 const InputError = require('../exceptions/InputError');
 
 (async () => {
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT || 8080;
 
   const server = Hapi.server({
     port: port,
