@@ -6,15 +6,21 @@ const loadModel = require('../services/loadModel');
 const InputError = require('../exceptions/InputError');
 
 (async () => {
+  const port = process.env.PORT || 3000;
+
   const server = Hapi.server({
-    port: 3000,
+    port: port,
     host: '0.0.0.0',
     routes: {
       cors: {
         origin: ['*'],
       },
+      payload: {
+        maxBytes: 10485760, 
+      },
     },
   });
+
 
   const model = await loadModel();
   server.app.model = model;
